@@ -4,7 +4,7 @@ import { ProductTile } from '../ProductTile'
 import { ProductsGridWrapper } from './styles'
 
 export const ProductsGrid = ({ products }) => {
-  console.log(products)
+  // console.log(products)
 
   return (
     <ProductsGridWrapper>
