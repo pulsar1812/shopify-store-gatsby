@@ -57,7 +57,7 @@ exports.handler = function (event, context, callback) {
             axios.post(process.env.NETLIFY_BUILD_URL)
           })
           .catch(err => {
-            console.log('Error adding to DB: ', err)
+            console.log('Error adding to database: ', err)
           })
       })
   } else {
