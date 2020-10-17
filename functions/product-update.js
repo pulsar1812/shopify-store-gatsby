@@ -16,6 +16,7 @@ exports.handler = function (event, context, callback) {
 
   if (isValid) {
     const body = JSON.parse(event.body)
+    console.log(body)
     const { id } = body
     delete body.updated_at
     body.variants.forEach(variant => {
