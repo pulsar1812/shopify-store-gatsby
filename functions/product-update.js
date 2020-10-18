@@ -32,7 +32,7 @@ exports.handler = function (event, context, callback) {
     client
       .query(q.Get(q.Match(q.Index('product_by_id', id))))
       .then(result => {
-        console.log('Result from query', result)
+        console.log('Result from query', result.data)
         if (result.data.product !== bodyString) {
           client
             .query(
