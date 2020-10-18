@@ -25,17 +25,14 @@ exports.handler = function (event, context, callback) {
       delete variant.old_inventory_quantity
     })
 
-    console.log('After deletion', body)
+    // console.log('After deletion', body)
 
     const bodyString = JSON.stringify(body)
 
     client
       .query(q.Get(q.Match(q.Index('product_by_id', id))))
       .then(result => {
-        console.log(
-          'Query result from FaunaDB',
-          JSON.parse(result.data.product)
-        )
+        console.log(result)
         if (result.data.product !== bodyString) {
           client
             .query(
