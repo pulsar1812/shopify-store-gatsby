@@ -16,7 +16,7 @@ exports.handler = function (event, context, callback) {
 
   if (isValid) {
     const body = JSON.parse(event.body)
-    console.log(body)
+    // console.log('All body info', body)
     const { id } = body
     delete body.updated_at
     body.variants.forEach(variant => {
@@ -25,14 +25,14 @@ exports.handler = function (event, context, callback) {
       delete variant.old_inventory_quantity
     })
 
-    console.log(body)
+    // console.log('After deletion', body)
 
     const bodyString = JSON.stringify(body)
 
     client
       .query(q.Get(q.Match(q.Index('product_by_id', id))))
       .then(result => {
-        console.log(result)
+        console.log('Result from query', result)
         if (result.data.product !== bodyString) {
           client
             .query(
