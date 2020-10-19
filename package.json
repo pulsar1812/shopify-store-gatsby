@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-shopify-starter",
+  "name": "gatsby-shopify-store",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby & Shopify.",
+  "description": "A Shopify store with Gatsby.",
   "version": "0.1.0",
-  "author": "Tom Phillips <info@tomphill.co.uk>",
+  "author": "",
   "dependencies": {
     "axios": "^0.20.0",
     "babel-plugin-styled-components": "^1.10.7",
@@ -46,12 +46,5 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tomphill/gatsby-shopify-starter"
-  },
-  "bugs": {
-    "url": "https://github.com/tomphill/gatsby-shopify-starter/issues"
   }
 }
